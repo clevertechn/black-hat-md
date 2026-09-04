@@ -1,5 +1,3 @@
-"use strict";
-
 require("events").EventEmitter.defaultMaxListeners = 960;
 require("./black_hat/gmdHelpers");
 
