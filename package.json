@@ -61,7 +61,8 @@
     "sqlite3": "5.1.7",
     "stream": "*",
     "util": "*",
-    "wa-sticker-formatter": "*"
+    "wa-sticker-formatter": "*",
+    "libsignal": "6.0.0"
   },
   "repository": {
     "type": "git",
