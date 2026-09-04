@@ -19,7 +19,7 @@
 <a href="https://github.com/clevertechn"><img title="GITHUB" src="https://img.shields.io/badge/GITHUB-CLEVER TECH-red.svg?style=for-the-badge&logo=github"></a>
 <p/>
 <p align="center">
-<a href="https://github.com/clevertechn?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/clevertechnexus2?label=Followers&style=social"></a>
+<a href="https://github.com/clevertechn?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/clevertechn?label=Followers&style=social"></a>
 <a href="https://github.com/clevertechn/black-hat-md/stargazers/"><img title="STARS" src="https://img.shields.io/github/stars/clevertechn/black-hat-md?&style=social"></a>
 <a href="https://github.com/clevertechn/black-hat-md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/clevertechn/black-hat-md?style=social"></a>
 <a href="https://github.com/clevertechn/black-hat-md/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/clevertechn/black-hat-md?label=Watching&style=social"></a>
