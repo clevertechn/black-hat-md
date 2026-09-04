@@ -62,12 +62,12 @@
     "stream": "*",
     "util": "*",
     "wa-sticker-formatter": "*",
+  },
 "overrides": {
   "gifted-baileys": {
     "libsignal": "6.0.0"
   }
 },
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clevertechn/black-hat-md.git"
