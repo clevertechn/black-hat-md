@@ -171,7 +171,9 @@ SESSION_ID=BlackHat~your_session_id_here
 <details>
 <summary><b>🔥 TAP TO OPEN BOT HOSTING GUIDE</b></summary>
 
-Need a server to run Black Hat MD 24/7?
+<p aligin="center">
+  Need a server to run Black Hat MD 24/7?
+</p>
 
 <p align="center"><a href="https://bot-hosting.net/?aff=clevertechn" target="_blank">
 <img src="https://img.shields.io/badge/🔥%20GET%20YOUR%20BOT%20HOSTING%20NOW-blue?style=for-the-badge" alt="Get Bot Hosting">
@@ -318,7 +320,7 @@ The Startup Command above is designed to approve and rebuild the important nativ
 <img src="https://img.shields.io/badge/WATCH%20TUTORIAL-red?style=for-the-badge" alt="Bot Hosting Tutorial">
 </a>
 
-🔥 GET BOT HOSTING
+### 🔥 GET BOT HOSTING
 
 <a href="https://bot-hosting.net/?aff=clevertechn" target="_blank">
 <img src="https://img.shields.io/badge/🚀%20BOT%20HOSTING%20%E2%80%94%20START%20NOW-blue?style=for-the-badge" alt="Bot Hosting">
