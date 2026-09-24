@@ -23,8 +23,6 @@
     },
     "allowScripts": {
         "ffmpeg-static": "true",
-        "@ffmpeg-installer/linux-x64": true,
-        "protobufjs": true,
         "sharp": "true"
     },
     "keywords": [
