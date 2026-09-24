@@ -1,6 +1,14 @@
 🖤 BLACK HAT-MD
 
 <p align="center">
+  <img
+    src="https://raw.githubusercontent.com/clevertechn/Update/main/file_000000008a7c81f48210c3d702b3858e.png"
+    alt="BLACK HAT-MD - WhatsApp Multi-Device Bot"
+    width="100%"
+  />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/BLACK%20HAT--MD-WhatsApp%20Bot-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="BLACK HAT-MD">
 </p><p align="center">
   <strong>A Powerful WhatsApp Multi-Device Bot</strong>
