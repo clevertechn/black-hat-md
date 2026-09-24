@@ -52,9 +52,9 @@
 
 | Method | Button |
 |--------|--------|
-| **Pair 1** | <a href="https://session.clevertech.qzz.io/pair/"><img src="https://img.shields.io/badge/Pair%201-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
-| **Pair 2** | <a href="https://session.clevertech.qzz.io/pair"><img src="https://img.shields.io/badge/Pair%202-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
-| **QR Code** | <a href="https://session.clevertech.qzz.io/qr"><img src="https://img.shields.io/badge/QR%20Code-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **Pair 1** | <a href="https://sessions.clevertech.qzz.io/pair/"><img src="https://img.shields.io/badge/Pair%201-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **Pair 2** | <a href="https://sessions.clevertech.qzz.io/pair"><img src="https://img.shields.io/badge/Pair%202-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **QR Code** | <a href="https://sessions.clevertech.qzz.io/qr"><img src="https://img.shields.io/badge/QR%20Code-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
 
 </div>
 
