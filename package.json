@@ -1,0 +1,98 @@
+{
+    "name": "black-hat-md",
+    "version": "5.0.2",
+    "description": "black-hat-md, a Multi Device Whatsapp Bot built by clever tech nexus to Enhance Whatsapp Communication Experience.",
+    "main": "./index.js",
+    "type": "commonjs",
+    "scripts": {
+        "dev": "node index.js",
+        "postinstall": "node postinstall.js",
+        "setup": "npm install",
+        "start": "pm2 start index.js --name black-hat-md --watch",
+        "stop": "pm2 stop black-hat-md",
+        "restart": "pm2 restart black-hat-md",
+        "logs": "pm2 logs black-hat-md",
+        "monit": "pm2 monit",
+        "delete": "pm2 delete black-hat-md",
+        "stash": "git stash && git stash drop"
+    },
+    "pkg": {
+        "assets": [
+            "node_modules/ffmpeg-static/ffmpeg"
+        ]
+    },
+    "allowScripts": {
+        "@ffmpeg-installer/linux-x64": true,
+        "better-sqlite3": true,
+        "ffmpeg-static": true,
+        "protobufjs": true,
+        "sqlite3": true,
+        "sharp": true
+    },
+    "keywords": [
+        "clevertechn",
+        "black-hat-md",
+        "whatsapp-bot",
+        "Clever Tech Nexus"
+    ],
+    "author": "clevertechn",
+    "license": "MIT",
+    "dependencies": {
+        "@ffmpeg-installer/ffmpeg": "*",
+        "@hapi/boom": "*",
+        "@vitalets/google-translate-api": "^9.2.0",
+        "acrcloud": "*",
+        "adm-zip": "*",
+        "audio-decode": "^2.2.3",
+        "axios": "^1.2.5",
+        "better-sqlite3": "^12.6.2",
+        "body-parser": "latest",
+        "buffer": "*",
+        "dotenv": "*",
+        "canvacord": "*",
+        "express": "^4.19.2",
+        "ffmpeg-static": "*",
+        "file-type": "17.1.6",
+        "fluent-ffmpeg": "*",
+        "form-data": "^4.0.1",
+        "fs": "^0.0.1-security",
+        "fs-extra": "^11.1.0",
+        "gifted-baileys": "2.5.8",
+        "gifted-btns": "^1.0.2",
+        "gifted-dls": "*",
+        "google-tts-api": "*",
+        "jimp": "*",
+        "mime-types": "^2.1.35",
+        "moment-timezone": "^0.5.45",
+        "node-cache": "^5.1.2",
+        "node-fetch": "^3.3.2",
+        "path": "latest",
+        "pg": "latest",
+        "protobufjs": "*",
+        "pino": "^7.0.5",
+        "pm2": "latest",
+        "qrcode-terminal": "^0.12.0",
+        "sequelize": "latest",
+        "sharp": "latest",
+        "sqlite3": "5.1.7",
+        "stream": "*",
+        "util": "*",
+        "wa-sticker-formatter": "*",
+        "yt-search": "2.13.1",
+        "awesome-phonenumber": "7.5.0",
+        "cheerio": "latest"
+    },
+    "overrides": {
+        "gifted-baileys": {
+            "libsignal": "6.0.0"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/clevertechn/black-hat-md.git"
+    },
+    "bugs": {
+        "url": "https://github.com/clevertechn/black-hat-md/issues"
+    },
+    "homepage": "https://github.com/clevertechn/black-hat-md#readme"
+}

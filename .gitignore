@@ -1,0 +1,9 @@
+.env
+node_modules/
+
+black_hat/database/local-data/
+
+black_hat/session/
+*.log
+.tmp/
+
