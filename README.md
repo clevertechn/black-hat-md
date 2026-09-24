@@ -1,165 +1,79 @@
-<p align="center">
-  <img
-    src="https://raw.githubusercontent.com/clevertechn/Update/main/file_000000008a7c81f48210c3d702b3858e.png"
-    alt="BLACK HAT-MD"
-    width="100%"
-  />
-</p><p align="center">
-  <strong>WhatsApp Multi-Device Bot</strong><br>
-  Powerful • Fast • Reliable
-</p><p align="center">
-  <a href="https://github.com/clevertechn/black-hat-md/fork">
-    <img src="https://img.shields.io/badge/🍴%20FORK%20REPOSITORY-25D366?style=for-the-badge" alt="Fork Repository">
+<div align="center">
+  <h1>BLACK HAT-MD</h1>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Rockwell&size=45&pause=1000&color=33ff00&center=true&width=800&height=80&lines=BLACK-Hat-MD-Official;Multi+Device+Whatsapp+Bot;Made+by+Clever+Techn" alt="Typing SVG" />
   </a>
-  <a href="https://session.clevertech.qzz.io/pair">
-    <img src="https://img.shields.io/badge/🔑%20GET%20SESSION-128C7E?style=for-the-badge" alt="Get Session">
-  </a>
-</p><p align="center">
-  <a href="https://github.com/clevertechn/black-hat-md/issues">
-    <img src="https://img.shields.io/badge/🐛%20REPORT%20ISSUE-FF4757?style=for-the-badge" alt="Report Issue">
-  </a>
-  <a href="https://chat.whatsapp.com/COYNDC7v8iDHNWpweEVp2L">
-    <img src="https://img.shields.io/badge/💬%20SUPPORT%20GROUP-25D366?style=for-the-badge" alt="WhatsApp Support">
-  </a>
-</p><p align="center">
-  <img src="https://img.shields.io/github/stars/clevertechn/black-hat-md?style=flat-square&logo=github" alt="Stars">
-  <img src="https://img.shields.io/github/forks/clevertechn/black-hat-md?style=flat-square&logo=github" alt="Forks">
-  <img src="https://img.shields.io/github/issues/clevertechn/black-hat-md?style=flat-square" alt="Issues">
-</p>---
+</div>
 
-✨ Features
-
-- 🤖 WhatsApp Multi-Device
-- ⚡ Fast & efficient commands
-- 🔐 Session authentication
-- 🌍 Custom timezone
-- 🗄️ PostgreSQL support
-- 🐳 Docker ready
-- ☁️ Cloud deployment
-- 🌐 Health & readiness checks
+<div align="center">
+  <img src="https://github.com/clevertechnexus.png" alt="BLACK HAT-MD" height="250">
+</div>
 
 ---
 
-🚀 Quick Start
-
-1. Clone
-
-git clone https://github.com/clevertechn/black-hat-md.git
-cd black-hat-md
-
-2. Install
-
-npm install
-
-3. Configure
-
-Create a ".env" file:
-
-SESSION_ID=BlackHat~your_session_id_here
-MODE=public
-TIME_ZONE=Africa/Nairobi
-
-Optional PostgreSQL:
-
-DATABASE_URL=your_postgresql_connection_url
-
-4. Start
-
-npm start
-
-Development:
-
-npm run dev
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=The+bot+supports+deployment;On+all+free+panels+easily" alt="Typing SVG" />
+</div>
 
 ---
 
-🔑 Session ID
+> Quick Actions
 
-Generate your session:
+<div align="center">
 
-<p align="center">
-  <a href="https://session.clevertech.qzz.io/pair">
-    <img src="https://img.shields.io/badge/GET%20SESSION%20ID-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Get Session ID">
-  </a>
-</p>Your session must start with:
+| Action | Link |
+|--------|------|
+| **Fork Repository** | <a href="https://github.com/clevertechn/black-hat-md/fork"><img src="https://img.shields.io/badge/Fork Repo%20-24292e?style=for-the-badge&logo=github&logoColor=white&logoSize=auto"/></a> |
+| **Download ZIP** | <a href="https://github.com/clevertechn/black-hat-md/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/Download%20-2ea043?style=for-the-badge&logo=github&logoColor=white&logoSize=auto"/></a> |
 
-BlackHat~
-
-Example:
-
-SESSION_ID=BlackHat~xxxxxxxxxxxxxxxx
-
-«⚠️ Keep your session ID private.»
+</div>
 
 ---
 
-☁️ Deployment
+> 🌐 Deployment Options
 
-<p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/clevertechn/black-hat-md">
-    <img src="https://img.shields.io/badge/DEPLOY%20ON%20HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy on Heroku">
-  </a>
-  <a href="https://railway.app/">
-    <img src="https://img.shields.io/badge/DEPLOY%20ON%20RAILWAY-000000?style=for-the-badge&logo=railway&logoColor=white" alt="Deploy on Railway">
-  </a>
-</p><p align="center">
-  <a href="https://render.com/">
-    <img src="https://img.shields.io/badge/DEPLOY%20ON%20RENDER-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Deploy on Render">
-  </a>
-  <a href="https://github.com/clevertechn/black-hat-md">
-    <img src="https://img.shields.io/badge/DOCKER%20READY-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  </a>
-</p>---
+<div align="center">
 
-🐳 Docker
+| Platform | Button |
+|----------|--------|
+| **Heroku** | <a href="https://dashboard.heroku.com/new?template=https://github.com/clevertechn/black-hat-md"><img src="https://img.shields.io/badge/HerokuHosting-6762A6?style=for-the-badge&logo=heroku&logoColor=white&logoSize=auto"/></a> |
+| **Railway** | <a href="https://railway.app/new"><img src="https://img.shields.io/badge/Railway-000000?style=for-the-badge&logo=railway&logoColor=white&logoSize=auto"/></a> |
+| **Render** | <a href="https://render.com"><img src="https://img.shields.io/badge/Render-0099ff?style=for-the-badge&logo=render&logoColor=white&logoSize=auto"/></a> |
+| **Koyeb (Docker)** | <a href="https://app.koyeb.com/deploy?type=git&amp;repository=clevertechn/black-hat-md/&amp;branch=main&amp;builder=dockerfile"><img src="https://img.shields.io/badge/Koyeb-6C4CF1?style=for-the-badge"/></a> |
+| **CypherXHost** | <a href="https://platform.cypherx.store/register?ref=CLEVER15B2F1"><img src="https://img.shields.io/badge/CypherXHosting-007BFF?style=for-the-badge&logo=cypherxhost&logoColor=white&logoSize=auto"/></a> |
 
-docker build -t black-hat-md .
-
-docker run -d \
-  --name black-hat-md \
-  --env-file .env \
-  black-hat-md
+</div>
 
 ---
 
-❤️ Health Checks
+> 🔑 Session & Pairing
 
-/health
-/readyz
+<div align="center">
 
-Endpoint| Purpose
-"/health"| Bot health status
-"/readyz"| Deployment readiness
+| Method | Button |
+|--------|--------|
+| **Pair 1** | <a href="https://session.clevertech.qzz.io/pair/"><img src="https://img.shields.io/badge/Pair%201-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **Pair 2** | <a href="https://session.clevertech.qzz.io/pair"><img src="https://img.shields.io/badge/Pair%202-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **QR Code** | <a href="https://session.clevertech.qzz.io/qr"><img src="https://img.shields.io/badge/QR%20Code-1a1a4e?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
 
----
-
-🛠️ Commands
-
-Command| Description
-"npm install"| Install dependencies
-"npm start"| Start the bot
-"npm run dev"| Development mode
-"npm run setup"| Setup dependencies
+</div>
 
 ---
 
-💬 Support
+> 💬 Support & Community
 
-<p align="center">
-  <a href="https://chat.whatsapp.com/COYNDC7v8iDHNWpweEVp2L">
-    <img src="https://img.shields.io/badge/WHATSAPP%20SUPPORT-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Support">
-  </a>
-  <a href="https://github.com/clevertechn/black-hat-md/issues">
-    <img src="https://img.shields.io/badge/GITHUB%20ISSUES-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Issues">
-  </a>
-</p>---
+<div align="center">
 
-📜 Disclaimer
+| Platform | Link |
+|----------|------|
+| **WhatsApp Group** | <a href="https://whatsapp.com/channel/0029Vb73SRl1CYoLWtyr4u1X"><img src="https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&logoSize=auto"/></a> |
+| **YouTube** | <a href="https://www.youtube.com/@clevertechn"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white&logoSize=auto"/></a> |
+| **Telegram** | <a href="t.me/clevertechn"><img src="https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white&logoSize=auto"/></a> |
 
-BLACK HAT-MD is provided for educational and automation purposes. Users are responsible for complying with applicable laws and WhatsApp's terms of service.
+</div>
 
 ---
 
-<p align="center">
-  <strong>Built with ❤️ by Clever Tech Nexus</strong>
-</p>
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/clevertechn">Clever Tech Nexus</a></sub>
+</div>
