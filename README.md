@@ -16,7 +16,6 @@
 | --- | --- |
 | **Fork Repository** | [Fork on GitHub](https://github.com/clevertechn/black-hat-md/fork) |
 | **Download ZIP** | [Download](https://github.com/clevertechn/black-hat-md/archive/refs/heads/main.zip) |
-| **Core Repository** | [black-hat-md-core](https://github.com/clevertechn/black-hat-md-core) |
 
 ---
 
