@@ -3,7 +3,13 @@
   "version": "5.0.2",
   "description": "black-hat-md, a Multi Device Whatsapp Bot built by clever tech nexus to Enhance Whatsapp Communication Experience",
   "logo": "https://github.com/clevertechnexus.png",
-  "keywords": ["black-hat-md", "gifted-baileys", "gifted-btns", "gifted-api", "clevertechn"],
+  "keywords": [
+    "black-hat-md",
+    "gifted-baileys",
+    "gifted-btns",
+    "gifted-api",
+    "clevertechn"
+  ],
   "success_url": "/",
   "stack": "heroku-22",
   "env": {
@@ -12,41 +18,69 @@
       "required": true,
       "value": ""
     },
-    "MODE": {
-      "description": "Worktype of your bot. Use 'public' (everyone can use it) or 'private' (only bot number).",
-      "required": true,
-      "value": "public"
-    },
-    "TIME_ZONE": {
-      "description": "Your timezone e.g. Africa/Nairobi, America/New_York, Asia/Kolkata",
-      "required": true,
-      "value": "Africa/Nairobi"
-    },
     "AUTO_LIKE_STATUS": {
-      "description": "Auto-like WhatsApp statuses. Set true or false.",
+      "description": "Automatically like WhatsApp statuses.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_VIEW_STATUS": {
+      "description": "Automatically view WhatsApp statuses.",
       "required": false,
       "value": "true"
     },
-    "AUTO_READ_STATUS": {
-      "description": "Auto-view WhatsApp statuses. Set true or false.",
+    "AUTO_READ": {
+      "description": "Automatically mark incoming messages as read.",
       "required": false,
-      "value": "true"
+      "value": "false"
+    },
+    "AUTO_RECORDING": {
+      "description": "Show recording presence before responding.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_TYPING": {
+      "description": "Show typing presence before responding.",
+      "required": false,
+      "value": "false"
+    },
+    "PREFIX": {
+      "description": "Default bot command prefix.",
+      "required": false,
+      "value": "."
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Keep the bot presence online when supported.",
+      "required": false,
+      "value": "false"
+    },
+    "ANTI_DELETE": {
+      "description": "Enable anti-delete behavior where supported by the bot.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_REACT": {
+      "description": "Enable automatic reactions where supported.",
+      "required": false,
+      "value": "false"
+    },
+    "LANGUAGE": {
+      "description": "Default bot language.",
+      "required": false,
+      "value": "en"
     },
     "DATABASE_URL": {
-      "description": "PostgreSQL connection URL. Leave blank to use the auto-provisioned Heroku Postgres addon, or supply your own (Neon, Supabase, etc.). Requires PostgreSQL (Neon, Supabase, Render, or Heroku Postgres).",
+      "description": "Optional PostgreSQL connection URL. If empty, the bot uses local SQLite database.db.",
       "required": false,
       "value": ""
     }
   },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:essential-0",
-      "as": "DATABASE"
-    }
-  ],
   "buildpacks": [
-    { "url": "heroku/nodejs" },
-    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" }
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
   ],
   "formation": {
     "web": {
@@ -57,9 +91,7 @@
   "environments": {
     "test": {
       "addons": [],
-      "env": {
-        "DATABASE_URL": ""
-      }
+      "env": {}
     }
   }
 }
