@@ -24,7 +24,7 @@
 | Action | Link |
 |--------|------|
 | **Fork Repository** | <a href="https://github.com/clevertechn/black-hat-md/fork"><img src="https://img.shields.io/badge/Fork Repo%20-24292e?style=for-the-badge&logo=github&logoColor=white&logoSize=auto"/></a> |
-| **Download ZIP** | <a href="https://github.com/clevertechn/black-hat-md/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/Download%20-2ea043?style=for-the-badge&logo=github&logoColor=white&logoSize=auto"/></a> |
+| **Download Latest Release** | <a href="https://github.com/clevertechn/black-hat-md/releases/latest/download/black-hat-md-v5.3.0.zip"><img src="https://img.shields.io/badge/Download%20Release-2ea043?style=for-the-badge&logo=github&logoColor=white&logoSize=auto"/></a> |
 
 </div>
 
