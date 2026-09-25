@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "node index.js",
         "setup": "npm install",
-        "start": "pm2 start index.js --name black-hat-md --watch",
+        "start": "pm2 start index.js --name black-hat-md",
         "stop": "pm2 stop black-hat-md",
         "restart": "pm2 restart black-hat-md",
         "logs": "pm2 logs black-hat-md",
