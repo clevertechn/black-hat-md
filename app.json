@@ -1,0 +1,97 @@
+{
+  "name": "black-hat-md",
+  "version": "5.3.0",
+  "description": "black-hat-md, a Multi Device Whatsapp Bot built by clever tech nexus to Enhance Whatsapp Communication Experience",
+  "logo": "https://github.com/clevertechnexus.png",
+  "keywords": [
+    "black-hat-md",
+    "gifted-baileys",
+    "gifted-btns",
+    "gifted-api",
+    "clevertechn"
+  ],
+  "success_url": "/",
+  "stack": "heroku-22",
+  "env": {
+    "SESSION_ID": {
+      "description": "Your bot SESSION_ID. Get one from the pairing session page.",
+      "required": true,
+      "value": ""
+    },
+    "AUTO_LIKE_STATUS": {
+      "description": "Automatically like WhatsApp statuses.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_VIEW_STATUS": {
+      "description": "Automatically view WhatsApp statuses.",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_READ": {
+      "description": "Automatically mark incoming messages as read.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_RECORDING": {
+      "description": "Show recording presence before responding.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_TYPING": {
+      "description": "Show typing presence before responding.",
+      "required": false,
+      "value": "false"
+    },
+    "PREFIX": {
+      "description": "Default bot command prefix.",
+      "required": false,
+      "value": "."
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Keep the bot presence online when supported.",
+      "required": false,
+      "value": "false"
+    },
+    "ANTI_DELETE": {
+      "description": "Enable anti-delete behavior where supported by the bot.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_REACT": {
+      "description": "Enable automatic reactions where supported.",
+      "required": false,
+      "value": "false"
+    },
+    "LANGUAGE": {
+      "description": "Default bot language.",
+      "required": false,
+      "value": "en"
+    },
+    "DATABASE_URL": {
+      "description": "Optional PostgreSQL connection URL. If empty, the bot uses local SQLite database.db.",
+      "required": false,
+      "value": ""
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "environments": {
+    "test": {
+      "addons": [],
+      "env": {}
+    }
+  }
+}
