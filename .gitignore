@@ -1,9 +1,13 @@
 .env
 node_modules/
 
-black_hat/database/local-data/
 
 black_hat/session/
 *.log
 .tmp/
 
+# Runtime database files
+database.db
+database.db-*
+backups/
+.runtime/
