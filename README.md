@@ -41,6 +41,7 @@
 | **Render** | <a href="https://render.com"><img src="https://img.shields.io/badge/Render-0099ff?style=for-the-badge&logo=render&logoColor=white&logoSize=auto"/></a> |
 | **Koyeb (Docker)** | <a href="https://app.koyeb.com/deploy?type=git&amp;repository=clevertechn/black-hat-md/&amp;branch=main&amp;builder=dockerfile"><img src="https://img.shields.io/badge/Koyeb-6C4CF1?style=for-the-badge"/></a> |
 | **CypherXHost** | <a href="https://platform.cypherx.store/register?ref=CLEVER15B2F1"><img src="https://img.shields.io/badge/CypherXHosting-007BFF?style=for-the-badge&logo=cypherxhost&logoColor=white&logoSize=auto"/></a> |
+| **Katabump** | <a href="https://rl.katabump.fr/3630c0"><img src="https://img.shields.io/badge/Katabump-007BFF?style=for-the-badge&logo=Katabump&logoColor=white&logoSize=auto"/></a> |
 
 </div>
 
