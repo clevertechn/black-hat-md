@@ -28,10 +28,13 @@
         "sharp": "true"
     },
     "keywords": [
-        "clevertechn",
         "black-hat-md",
         "whatsapp-bot",
-        "Clever Tech Nexus"
+        "whatsapp-md",
+        "baileys",
+        "multi-device",
+        "bot",
+        "clevertechn"
     ],
     "author": "clevertechn",
     "license": "MIT",
