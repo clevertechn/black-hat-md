@@ -4,11 +4,13 @@
   "description": "black-hat-md, a Multi Device Whatsapp Bot built by clever tech nexus to Enhance Whatsapp Communication Experience",
   "logo": "https://github.com/clevertechnexus.png",
   "keywords": [
-    "black-hat-md",
-    "gifted-baileys",
-    "gifted-btns",
-    "gifted-api",
-    "clevertechn"
+        "black-hat-md",
+        "whatsapp-bot",
+        "whatsapp-md",
+        "baileys",
+        "multi-device",
+        "bot",
+        "clevertechn"
   ],
   "success_url": "/",
   "stack": "heroku-22",
