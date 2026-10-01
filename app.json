@@ -1,20 +1,16 @@
 {
 	"name": "black-hat-md",
 	"version": "6.0.0",
-	"description": "BLACK HAT MD - Enterprise-grade Multi-Device WhatsApp Bot by Clever Tech Nexus. Secure, fast, and built for scalable communication automation.",
+	"description": "BLACK HAT MD - Multi-Device WhatsApp Bot by Clever Tech Nexus. Secure, fast, and built for scalable communication automation.",
 	"logo": "https://github.com/clevertechnexus.png",
-	"author": "Clever Tech Nexus <support@clevertech.com>",
+	"author": "Clever Tech Nexus <support@sessions.clevertech.qzz.io>",
 	"license": "MIT",
 	"repository": "https://github.com/clevertechn/black-hat-md",
 	"keywords": [
 		"black-hat-md",
 		"whatsapp-bot",
-		"whatsapp-md",
 		"baileys",
-		"multi-device",
-		"automation",
-		"clevertechnexus",
-		"enterprise-bot"
+		"clevertechn"
 	],
 	"success_url": "/",
 	"stack": "heroku-22",

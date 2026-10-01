@@ -1,13 +1,18 @@
 {
     "name": "black-hat-md",
     "version": "6.0.0",
-    "description": "BLACK HAT-MD - A powerful multi-device WhatsApp bot built by Clever Tech Nexus to enhance communication.",
+    "description": "BLACK HAT-MD - Multi-Device WhatsApp bot by Clever Tech Nexus. Secure, fast, and built for scalable automation.",
     "private": false,
     "license": "MIT",
-    "author": "Clever Tech Nexus <clevertechn>",
+    "author": "Clever Tech Nexus <support@sessions.clevertechn.qzz.io>",
     "contributors": [
         "Clever Tech Nexus"
     ],
+    "homepage": "https://github.com/clevertechn/black-hat-md#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clevertechn/black-hat-md.git"
+    },
     "type": "commonjs",
     "main": "./index.js",
     "engines": {
@@ -19,10 +24,7 @@
     "keywords": [
         "black-hat-md",
         "whatsapp-bot",
-        "whatsapp-md",
-        "baileys",
-        "multi-device",
-        "bot",
+        "baileys",,,
         "clevertechn"
     ],
     "pkg": {
@@ -44,10 +46,6 @@
     "scripts": {
         "start": "node index.js",
         "dev": "node index.js",
-        "dev:pretty": "node index.js | pino-pretty --colorize --levelFirst",
-        "postinstall": "node scripts/ensure-native-deps.js && node scripts/patch-baileys-rc14.js || true",
-        "dbcheck": "node -e \"require('./black_hat/database/maintenance').integrityCheck().then(r=>{console.log(JSON.stringify(r,null,2));process.exit(r.ok?0:1)}).catch(e=>{console.error(e);process.exit(1)})\"",
-        "dbbackup": "node -e \"require('./black_hat/database/maintenance').backupSqliteDatabase().then(x=>console.log(x)).catch(e=>{console.error(e);process.exit(1)})\"",
         "lint": "node --check index.js"
     },
     "dependencies": {
