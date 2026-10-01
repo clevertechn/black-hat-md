@@ -1,91 +1,132 @@
-BLACK HAT-MD - Termux Deployment
+# Deploy BLACK HAT-MD in Termux (Android)
 
-[clevertechn/black-hat-md](https://github.com/clevertechn/black-hat-md) on Android using Termux.
+This guide is for [`clevertechn/black-hat-md`](https://github.com/clevertechn/black-hat-md). The repository README lists hosting options and WhatsApp pairing links, but does not provide Termux-specific installation steps. Its `package.json` requires **Node.js 20 or newer** and **npm 10 or newer** and includes native dependencies such as `sharp`, `sqlite3`, and `ffmpeg-static`.
 
-The upstream repository does not include Termux-specific instructions. This guide covers a stable method using Debian PRoot, which is required because native dependencies (`sharp`, `sqlite3`, `ffmpeg-static`) do not provide official binaries for Android/Termux.
+## Recommended method: Debian inside Termux (no root required)
 
-Requirements
-- **OS:** Android 8+
-- **Node.js:** >= 20.0.0
-- **npm:** >= 10.0.0
-- **Packages:** git, ffmpeg, python3, make, g++
+Use a Debian userland through `proot-distro` rather than installing the bot directly into Termux. The bot uses native modules, and the published `sharp` and `ffmpeg-static` binaries do not list Android/Termux as a supported target.
 
-Method 1: Recommended (Debian PRoot - No Root)
+### 1. Install Termux and Debian
 
-This isolates the bot in a Debian environment, avoiding native module failures.
-
-**1. Setup Termux & Debian**
-
-Install Termux from [F-Droid](https://f-droid.org/en/packages/com.termux/) and run:
+Install Termux from [F-Droid](https://f-droid.org/en/packages/com.termux/) or the [official Termux GitHub releases](https://github.com/termux/termux-app/releases). Open Termux and run:
 
 ```sh
 pkg update -y && pkg upgrade -y
 pkg install -y proot-distro tmux
 proot-distro install debian
 proot-distro login debian
-> All commands below should be executed *inside Debian*.
+```
 
-*2. Install Dependencies*
+The last command opens a Debian shell. Run the remaining setup commands **inside Debian** unless a step explicitly says “Termux shell.”
+
+### 2. Install build tools, FFmpeg, and Node.js 22
+
+```sh
 apt update && apt upgrade -y
 apt install -y ca-certificates curl git python3 make g++ ffmpeg
-curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+```
+
+Install Node.js 22 from NodeSource. You can inspect the setup script before running it:
+
+```sh
+curl -fsSL https://deb.nodesource.com/setup_22.x -o /tmp/nodesource_setup.sh
+sed -n '1,160p' /tmp/nodesource_setup.sh
+bash /tmp/nodesource_setup.sh
 apt install -y nodejs
-node -v && npm -v
-*3. Install Bot*
+rm -f /tmp/nodesource_setup.sh
+```
+
+Check the versions:
+
+```sh
+node --version
+npm --version
+```
+
+Use a Node version **at least 20** and npm **at least 10**. Node 22 is a good choice for the repository’s dependencies.
+
+### 3. Download and install the bot
+
+```sh
 git clone https://github.com/clevertechn/black-hat-md.git
 cd black-hat-md
 npm install --omit=dev --no-audit --no-fund
-*4. Configure & Start*
+```
 
-Get your `SESSION_ID` from the official pairing site:
-- Pairing: https://sessions.clevertech.qzz.io/pair/
-- QR: https://sessions.clevertech.qzz.io/qr
+Use `npm install`, not `npm ci`: the repository does not include a `package-lock.json`.
 
-Never commit your `SESSION_ID`. Treat it as a password.
+### 4. Pair WhatsApp and start the bot
+
+Use the pairing instructions linked in the repository’s [README](https://github.com/clevertechn/black-hat-md#readme) (Pair 1, Pair 2, or QR Code) to create your **own** session. The README’s pairing links include:
+
+- [Pairing page](https://sessions.clevertech.qzz.io/pair/)
+- [QR page](https://sessions.clevertech.qzz.io/qr)
+
+Treat the resulting `SESSION_ID` like a password. Do not send it to anyone or commit it to GitHub. The repository currently tracks a `.env` file; its `SESSION_ID` and `DATABASE_URL` values were empty when checked, but do **not** put your live session into a commit.
+
+To enter your session privately in the terminal and start the bot:
+
+```sh
 read -r -s -p 'Paste your private SESSION_ID: ' SESSION_ID
+printf '\n'
 export SESSION_ID
 npm start
-Method 2: Native Termux (Experimental)
+```
 
-This may fail with `sharp` / `ffmpeg-static` platform errors.
-pkg update -y && pkg upgrade -y
-pkg install -y git nodejs-lts python build-essential clang ffmpeg
-git clone https://github.com/clevertechn/black-hat-md.git
-cd black-hat-md
-npm install --omit=dev --no-audit --no-fund
-npm start
-If it fails, use *Method 1*.
+The input is hidden while you type. Keep this terminal open. If WhatsApp asks you to link a device, use **WhatsApp → Linked devices → Link a device** and follow the pairing instructions. Leave `DATABASE_URL` unset unless you have intentionally configured your own PostgreSQL database.
 
-Keeping the Bot Alive
+## Keep it running in the background
 
-Run in the outer Termux shell:
+For a Termux shell that you can detach from and return to, run these commands in the **outer Termux shell** before logging into Debian:
+
+```sh
 termux-wake-lock
 tmux new -s blackhat-md
 proot-distro login debian
-cd ~/black-hat-md && export SESSION_ID="your_session" && npm start
-- Detach: `Ctrl + B` then `D`
-- Reattach: `tmux attach -t blackhat-md`
-- Stop: `Ctrl + C` inside tmux
-- Disable wake-lock: `termux-wake-unlock`
+cd ~/black-hat-md
+```
 
-Set Termux battery optimization to *Unrestricted* in Android settings. For 24/7 uptime, a VPS is recommended.
+Then enter the session and start the bot using Step 4. To detach from the running bot without stopping it, press **Ctrl+B**, then **D**. To return later:
 
-Troubleshooting
-Error	Solution
-`Unsupported engine`	Upgrade to Node 20+ and npm 10+
-`sharp` / `ffmpeg-static` error	You are in native Termux. Switch to Debian PRoot
-`sqlite3` build failed	`apt install python3 make g++` inside Debian and reinstall
-`Connection Closed` / `479`	This is a Baileys retry issue. Do not run the same session in two places. Generate a new SESSION_ID
-Bot stops on sleep	Enable `termux-wake-lock` and unrestricted battery usage
-Security Notice
+```sh
+tmux attach -t blackhat-md
+```
 
-- Do not share your `SESSION_ID`
-- Do not push `.env` with live credentials
-- The repository tracks `.env` by default; add your real values only locally
+To stop the bot, attach to its `tmux` session and press **Ctrl+C**. When you no longer need the wake lock, run `termux-wake-unlock` in the Termux shell.
 
-Credits
+Also set Android’s battery use for Termux to **Unrestricted** (wording varies by device), and allow background activity. Android manufacturers may still kill background processes, and the bot will not automatically resume after a phone reboot unless you set up a separate Termux:Boot script.
 
-- Base Project: https://github.com/clevertechn/black-hat-md
-- Termux: https://github.com/termux/termux-app / https://github.com/termux/proot-distro
-- NodeSource: https://github.com/nodesource/distributions
-- 
+## If you want to try native Termux instead
+
+Native Termux has Node.js packages and build tools:
+
+```sh
+pkg update -y && pkg upgrade -y
+pkg install -y git nodejs-lts python build-essential clang binutils pkg-config ffmpeg
+node --version
+npm --version
+```
+
+Then clone the repo and run `npm install --omit=dev --no-audit --no-fund`. However, installation or startup may fail on Android because this project’s native packages do not list Android/Termux as a supported platform. If you see `sharp`, `ffmpeg-static`, or native `sqlite3` errors, use the Debian PRoot method above instead of forcing Linux binaries into Termux.
+
+## Common checks
+
+- **`Unsupported engine`**: check `node --version` and `npm --version`; use Node 20+ and npm 10+.
+- **`sharp` or `ffmpeg-static` platform error**: run the project inside Debian PRoot, not native Termux.
+- **`sqlite3` build error**: confirm `python3`, `make`, and `g++` were installed inside Debian, then rerun the npm install command.
+- **WhatsApp disconnects or fails to pair**: create a fresh session using the README’s pairing flow. Do not run the same WhatsApp session in two bot instances at once.
+- **Bot stops when the phone sleeps**: enable Termux’s unrestricted battery/background setting and use `termux-wake-lock`; this still cannot guarantee 24/7 uptime on every Android device.
+
+For dependable 24/7 uptime, a small Linux VPS or supported cloud host is generally more reliable than keeping a phone awake.
+
+## References
+
+- [BLACK HAT-MD README and pairing/deployment links](https://github.com/clevertechn/black-hat-md#readme)
+- [BLACK HAT-MD `package.json` (Node requirements and dependencies)](https://github.com/clevertechn/black-hat-md/blob/main/package.json)
+- [Termux on F-Droid](https://f-droid.org/en/packages/com.termux/)
+- [Termux Node.js package guidance](https://wiki.termux.com/index.php?title=Node.js)
+- [Termux `proot-distro`](https://github.com/termux/proot-distro)
+- [Sharp installation and supported platforms](https://sharp.pixelplumbing.com/install/)
+- [`ffmpeg-static` supported platforms](https://github.com/eugeneware/ffmpeg-static)
+- [Termux wake-lock reference](https://wiki.termux.com/wiki/Termux-wake-lock)
+- [NodeSource distributions](https://github.com/nodesource/distributions)
