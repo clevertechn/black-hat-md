@@ -1,99 +1,107 @@
 {
-  "name": "black-hat-md",
-  "version": "5.3.0",
-  "description": "black-hat-md, a Multi Device Whatsapp Bot built by clever tech nexus to Enhance Whatsapp Communication Experience",
-  "logo": "https://github.com/clevertechnexus.png",
-  "keywords": [
-        "black-hat-md",
-        "whatsapp-bot",
-        "whatsapp-md",
-        "baileys",
-        "multi-device",
-        "bot",
-        "clevertechn"
-  ],
-  "success_url": "/",
-  "stack": "heroku-22",
-  "env": {
-    "SESSION_ID": {
-      "description": "Your bot SESSION_ID. Get one from the pairing session page.",
-      "required": true,
-      "value": ""
-    },
-    "AUTO_LIKE_STATUS": {
-      "description": "Automatically like WhatsApp statuses.",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_VIEW_STATUS": {
-      "description": "Automatically view WhatsApp statuses.",
-      "required": false,
-      "value": "true"
-    },
-    "AUTO_READ": {
-      "description": "Automatically mark incoming messages as read.",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_RECORDING": {
-      "description": "Show recording presence before responding.",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_TYPING": {
-      "description": "Show typing presence before responding.",
-      "required": false,
-      "value": "false"
-    },
-    "PREFIX": {
-      "description": "Default bot command prefix.",
-      "required": false,
-      "value": "."
-    },
-    "ALWAYS_ONLINE": {
-      "description": "Keep the bot presence online when supported.",
-      "required": false,
-      "value": "false"
-    },
-    "ANTI_DELETE": {
-      "description": "Enable anti-delete behavior where supported by the bot.",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_REACT": {
-      "description": "Enable automatic reactions where supported.",
-      "required": false,
-      "value": "false"
-    },
-    "LANGUAGE": {
-      "description": "Default bot language.",
-      "required": false,
-      "value": "en"
-    },
-    "DATABASE_URL": {
-      "description": "Optional PostgreSQL connection URL. If empty, the bot uses local SQLite database.db.",
-      "required": false,
-      "value": ""
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
-  ],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
-  "environments": {
-    "test": {
-      "addons": [],
-      "env": {}
-    }
-  }
+	"name": "black-hat-md",
+	"version": "6.0.0",
+	"description": "BLACK HAT MD - Enterprise-grade Multi-Device WhatsApp Bot by Clever Tech Nexus. Secure, fast, and built for scalable communication automation.",
+	"logo": "https://github.com/clevertechnexus.png",
+	"author": "Clever Tech Nexus <support@clevertech.com>",
+	"license": "MIT",
+	"repository": "https://github.com/clevertechn/black-hat-md",
+	"keywords": [
+		"black-hat-md",
+		"whatsapp-bot",
+		"whatsapp-md",
+		"baileys",
+		"multi-device",
+		"automation",
+		"clevertechnexus",
+		"enterprise-bot"
+	],
+	"success_url": "/",
+	"stack": "heroku-22",
+	"env": {
+		"SESSION_ID": {
+			"description": "Authentication SESSION_ID from Clever Tech Nexus pairing portal.",
+			"required": true,
+			"value": ""
+		},
+		"PREFIX": {
+			"description": "Bot command prefix.",
+			"required": false,
+			"value": "."
+		},
+		"LANGUAGE": {
+			"description": "Default system language (en/sw).",
+			"required": false,
+			"value": "en"
+		},
+		"DATABASE_URL": {
+			"description": "PostgreSQL URL for production. Defaults to local SQLite if not provided.",
+			"required": false,
+			"value": ""
+		},
+		"AUTO_VIEW_STATUS": {
+			"description": "Enable auto status view.",
+			"required": false,
+			"value": "true"
+		},
+		"AUTO_LIKE_STATUS": {
+			"description": "Enable auto status like.",
+			"required": false,
+			"value": "false"
+		},
+		"AUTO_READ": {
+			"description": "Auto mark messages as read.",
+			"required": false,
+			"value": "false"
+		},
+		"AUTO_TYPING": {
+			"description": "Show typing indicator before reply.",
+			"required": false,
+			"value": "false"
+		},
+		"AUTO_RECORDING": {
+			"description": "Show recording indicator before reply.",
+			"required": false,
+			"value": "false"
+		},
+		"ALWAYS_ONLINE": {
+			"description": "Keep presence always online.",
+			"required": false,
+			"value": "false"
+		},
+		"ANTI_DELETE": {
+			"description": "Enable anti-delete message recovery.",
+			"required": false,
+			"value": "false"
+		},
+		"AUTO_REACT": {
+			"description": "Enable smart auto-reactions.",
+			"required": false,
+			"value": "false"
+		},
+		"WA_PREFER_PERSISTED_AUTH": {
+			"description": "Persist WhatsApp auth state for faster restart.",
+			"required": false,
+			"value": "true"
+		},
+		"WA_KEEPALIVE_MS": {
+			"description": "WebSocket keep-alive interval in ms.",
+			"required": false,
+			"value": "30000"
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/nodejs"
+		},
+		{
+			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+		}
+	],
+	"formation": {
+		"web": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	}
 }
